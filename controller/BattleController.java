@@ -2,7 +2,6 @@ package controller;
 import  model.BattleHand;
 import au.edu.uts.ap.javafx.*;
 import javafx.fxml.FXML;
-import java.util.ResourceBundle.Control;
 import javafx.scene.control.ListView;
 import model.Card;
 import model.AttackType;

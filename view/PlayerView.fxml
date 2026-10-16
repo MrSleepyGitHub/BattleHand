@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
 <VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      >
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.PlayerController"
+            prefWidth="700.0" prefHeight="500.0" stylesheets="@/view/style.css" alignment="CENTER" spacing="15">
+
+      <!-- Header -->
+      <Label fx:id="titleLabel" styleClass="padding-medium" style="-fx-font-weight: bold; -fx-font-size: 18pt">Player</Label>
+      <Separator/>
+
+      <TableView fx:id="cardsTable" VBox.vgrow="ALWAYS">
+            <columns>
+                  <TableColumn fx:id="nameColumn" text="Name" prefWidth="100.0"/>
+                  <TableColumn fx:id="typeColumn" text="Name" prefWidth="100.0"/>
+                  <TableColumn fx:id="strengthColumn" text="Name" prefWidth="100.0"/>
+            </columns>
+      </TableView>
+      <Separator/>
+
+
+      <!-- Buttons -->
+        <HBox alignment="CENTER">
+            <Button text="Discard" onAction="#handleDiscard" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="Place in battle hand" onAction="#handlePlace" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+        </HBox>
+           
 
 </VBox>

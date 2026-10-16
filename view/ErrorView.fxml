@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      >
+      fx:controller="controller.ErrorController"
+      prefWidth="700.0" prefHeight="500.0" stylesheets="@/view/style.css" alignment="CENTER" spacing="15">
+
+      <!-- Error icon -->
+      <ImageView fitWidth="100" preserveRatio="true">
+            <image>
+                  <Image url="@image/error.png"/>
+            </image>
+      </ImageView>
+
+      <Label fx:id="exceptionLabel" styleClass="error" style="-fx-text-fill: red; -fx-font-weight: bold; -fx-font-size: 18pt;"/>
+      <Label fx:id="messageLabel" style="-fx-font-size: 12pt;"/>
+
+      <Region VBox.vgrow="ALWAYS"/>
+      <Separator/>
+      
+      <Button text="Close" onAction="#handleClose" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
 
 </VBox>

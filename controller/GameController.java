@@ -19,10 +19,16 @@ public class GameController extends Controller<Game> {
         try {
             getGame().deal();
         } catch (EmptyDeckException e) {
-            // ToDo
-            // Make a clean error display
+            try{
+                javafx.stage.Stage errorStage = new javafx.stage.Stage();
+                au.edu.uts.ap.javafx.ViewLoader.showStage(e, "/view/ErrorView.fxml", "Error", errorStage);
+            } catch (Exception e2){ 
+                // error with the error window(it was this or a switch case)
+                System.out.println("Error: " + e2.getMessage());
+            }
             System.out.println("Error: " + e.getMessage());
         }
+
         System.out.println("deal button pressed");
     }
 
@@ -43,6 +49,13 @@ public class GameController extends Controller<Game> {
             javafx.stage.Stage battleStage = new javafx.stage.Stage();
             au.edu.uts.ap.javafx.ViewLoader.showStage(getGame().getBattleHand(), "/view/BattleView.fxml", "Battle Hand", battleStage);
         } catch (Exception e) {
+            try{
+                javafx.stage.Stage errorStage = new javafx.stage.Stage();
+                au.edu.uts.ap.javafx.ViewLoader.showStage(e, "/view/ErrorView.fxml", "Error", errorStage);
+            } catch (Exception e2){ 
+                // error with the error window(it was this or a switch case)
+                System.out.println("Error: " + e2.getMessage());
+            }
             System.out.println("Error opening window: " +e.getMessage());
         }
         System.out.println("battlehand button pressed");
