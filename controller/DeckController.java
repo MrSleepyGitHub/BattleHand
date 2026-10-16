@@ -15,6 +15,19 @@ public class DeckController extends Controller<Deck> {
     }
 
     @FXML 
+    private void handleViewCard(){
+        Card selectedCard = cardsList.getSelectionModel().getSelectedItem();
+        if(selectedCard != null){
+            try{
+                javafx.stage.Stage cardStage = new javafx.stage.Stage();
+                au.edu.uts.ap.javafx.ViewLoader.showStage(selectedCard, "/view/CardView.fxml", selectedCard.toString().split(" ")[0], cardStage);
+            } catch(Exception e){
+                System.out.println("Error opening window: " + e.getMessage());
+            }
+        }
+    }
+
+    @FXML 
     private void handleShuffle(){
         getDeck().shuffle();
     }

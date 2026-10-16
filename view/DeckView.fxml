@@ -16,6 +16,7 @@
 
       <!-- Buttons -->
         <HBox alignment="CENTER">
+            <Button text="View" onAction="#handleViewCard" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
             <Button text="Shuffle" onAction="#handleShuffle" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
             <Button text="Close" onAction="#handleClose" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
         </HBox>
