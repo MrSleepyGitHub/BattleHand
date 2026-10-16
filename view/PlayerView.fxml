@@ -15,8 +15,8 @@
       <TableView fx:id="cardsTable" VBox.vgrow="ALWAYS">
             <columns>
                   <TableColumn fx:id="nameColumn" text="Name" prefWidth="100.0"/>
-                  <TableColumn fx:id="typeColumn" text="Name" prefWidth="100.0"/>
-                  <TableColumn fx:id="strengthColumn" text="Name" prefWidth="100.0"/>
+                  <TableColumn fx:id="typeColumn" text="Type" prefWidth="100.0"/>
+                  <TableColumn fx:id="strengthColumn" text="Strength" prefWidth="100.0"/>
             </columns>
       </TableView>
       <Separator/>

@@ -79,4 +79,31 @@ public class GameController extends Controller<Game> {
         stage.close();
     }
 
+/////////////////////////////////////////////////////
+// PLAYER WINDOWS
+////
+
+    @FXML 
+    private void handlePlayer1(){
+        openPlayerView(0, "Player 1");
+    }
+    @FXML 
+    private void handlePlayer2(){
+        openPlayerView(0, "Player 2");
+    }
+    @FXML 
+    private void handlePlayer3(){
+        openPlayerView(0, "Player 3");
+    }
+
+    private  void openPlayerView(int playerIndex, String title){
+        try{
+            javafx.stage.Stage playerStage = new javafx.stage.Stage();
+            model.Player player = getGame().getPlayers()[playerIndex];
+            au.edu.uts.ap.javafx.ViewLoader.showStage(player, "/view/PlayerView.fxml", title, playerStage);
+        } catch(Exception e){
+            System.out.println("Error opening window for: " +title + ": " +e.getMessage());
+        }
+    }
+
 }
