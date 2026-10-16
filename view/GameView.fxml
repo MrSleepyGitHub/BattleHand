@@ -16,6 +16,14 @@
         <Region VBox.vgrow="ALWAYS"/>
         <Separator/>
 
+        <!-- Weaken input field -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Weaken:"/>
+            <TextField fx:id="weakenField" prefWidth="100.0"/>
+        </HBox>
+
+        <Separator/>
+
         <!-- Buttons -->
         <HBox alignment="CENTER">
             <Button text="Deal" onAction="#handleDeal" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>

@@ -39,17 +39,24 @@ public class GameController extends Controller<Game> {
 
     @FXML 
     private void handleBattleHand(){
-        //ToDo
-        // open the battle window
+        try{
+            javafx.stage.Stage battleStage = new javafx.stage.Stage();
+            au.edu.uts.ap.javafx.ViewLoader.showStage(getGame().getBattleHand(), "/view/BattleView.fxml", "Battle Hand", battleStage);
+        } catch (Exception e) {
+            System.out.println("Error opening window: " +e.getMessage());
+        }
         System.out.println("battlehand button pressed");
     }
 
     @FXML 
     private void handleWeaken(){
-        //ToDo
-        //Weaken amount
-        // clear weaken field
-        // chose weaken text
+        try{
+            int amount = Integer.parseInt(weakenField.getText());
+            getGame().weaken(amount);
+            weakenField.clear();
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid weaken value!");
+        }
         System.out.println("weaken button pressed");
     }
 

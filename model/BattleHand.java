@@ -6,6 +6,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 
 import java.util.Objects;
 
@@ -48,5 +49,4 @@ public class BattleHand implements Hand {
     public boolean canPlace(Card card) {
         return cards.get(card.getType().slot()) == null;
     }
-
 }
