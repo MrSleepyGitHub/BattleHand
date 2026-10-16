@@ -23,6 +23,7 @@ public class GameController extends Controller<Game> {
             // Make a clean error display
             System.out.println("Error: " + e.getMessage());
         }
+        System.out.println("deal button pressed");
     }
 
     @FXML 
@@ -40,10 +41,21 @@ public class GameController extends Controller<Game> {
     private void handleBattleHand(){
         //ToDo
         // open the battle window
+        System.out.println("battlehand button pressed");
+    }
+
+    @FXML 
+    private void handleWeaken(){
+        //ToDo
+        //Weaken amount
+        // clear weaken field
+        // chose weaken text
+        System.out.println("weaken button pressed");
     }
 
     @FXML 
     private void handleExit(){
+        System.out.println("Quitting Game :(");
         stage.close();
     }
 

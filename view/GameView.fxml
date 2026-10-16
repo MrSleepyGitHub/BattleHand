@@ -19,6 +19,10 @@
         <!-- Buttons -->
         <HBox alignment="CENTER">
             <Button text="Deal" onAction="#handleDeal" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="Restore" onAction="#handleRestore" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="BattleHand" onAction="#handleBattleHand" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="Weaken" onAction="#handleWeaken" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="Exit" onAction="#handleExit" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
         </HBox>
 
 </VBox>
