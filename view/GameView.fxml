@@ -2,26 +2,52 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
 
 <VBox xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controller.GameController"
-            prefWidth="700.0" stylesheets="@/view/style.css" alignment="CENTER">
+            prefWidth="700.0" prefHeight="500.0" stylesheets="@/view/style.css" alignment="CENTER">
 
         <!-- Header -->
         <Label styleClass="padding-medium" style="-fx-font-weight: bold; -fx-font-size: 18pt">Battle Hand</Label>
         <Separator/>
 
-        <!-- Spacer -->
         <Region VBox.vgrow="ALWAYS"/>
-        <Separator/>
 
         <!-- Deck buttons -->
-        <HBox alignment="CENTER">
-            <Button text="Main Deck" onAction="#handleMainDeck" style="-fx-background-radius: 0;"/>
-            <Button text="Special Deck" onAction="#handleSpecialDeck" style="-fx-background-radius: 0;"/>
-            <Button text="Discard Pile" onAction="#handleDiscardPile" style="-fx-background-radius: 0;"/>
+        <HBox alignment="CENTER" spacing="20">
+            <Button onAction="#handleMainDeck" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 10;">
+                  <graphic>
+                        <ImageView fitWidth="100" preserveRatio="true">
+                              <image>
+                                    <Image url="@image/deck.png"/>
+                              </image>
+                        </ImageView>
+                  </graphic>
+            </Button>
+            <Button onAction="#handleSpecialDeck" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 10;">
+                  <graphic>
+                        <ImageView fitWidth="100" preserveRatio="true">
+                              <image>
+                                    <Image url="@image/deck.png"/>
+                              </image>
+                        </ImageView>
+                  </graphic>
+            </Button>
+            <Button onAction="#handleDiscardPile" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 10;">
+                  <graphic>
+                        <ImageView fitWidth="100" preserveRatio="true">
+                              <image>
+                                    <Image url="@image/deck.png"/>
+                              </image>
+                        </ImageView>
+                  </graphic>
+            </Button>
         </HBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
         <Separator/>
 
         <!-- player buttons -->
@@ -35,7 +61,7 @@
         <!-- Weaken input field -->
         <HBox alignment="CENTER" spacing="10">
             <Label text="Weaken:"/>
-            <TextField fx:id="weakenField" prefWidth="100.0"/>
+            <TextField fx:id="weakenField" prefWidth="250.0"/>
         </HBox>
 
         <Separator/>

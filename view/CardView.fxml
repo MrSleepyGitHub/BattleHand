@@ -7,22 +7,22 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.CardController"
-      prefWidth="300.0" prefHeight="500.0" stylesheets="@/view/style.css" alignment="CENTER" spacing="15">
+      stylesheets="@/view/style.css" alignment="CENTER" spacing="0">
 
       <!-- Image -->
-      <ImageView fx:id="cardImageView" fitWidth="250.0" preserveRatio="true"/>
+      <ImageView fx:id="cardImageView" fitWidth="300.0" preserveRatio="true"/>
 
       <!-- Strength -->
-      <Label fx:id="strengthLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/>
+      <!-- <Label fx:id="strengthLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/> -->
       
       <!-- Name -->
-      <Label fx:id="nameLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/>
+      <!-- <Label fx:id="nameLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/> -->
       
       <!-- Type -->
-      <Label fx:id="typeLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/>
+      <!-- <Label fx:id="typeLabel" style="-fx-font-weight: bold; -fx-font-size: 18pt"/> -->
 
-      <Region VBox.vgrow="ALWAYS"/>
-      <Separator/>
+      <!-- <Region VBox.vgrow="ALWAYS"/>
+      <Separator/> -->
 
       <Button text="Close" onAction="#handleClose" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
 

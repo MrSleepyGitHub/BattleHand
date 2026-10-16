@@ -10,12 +10,12 @@ public class CardController extends Controller<Card>{
 
     @FXML 
     private ImageView cardImageView;
-    @FXML
-    private Label strengthLabel;
-    @FXML
-    private Label nameLabel;
-    @FXML
-    private Label typeLabel;
+    // @FXML
+    // private Label strengthLabel;
+    // @FXML
+    // private Label nameLabel;
+    // @FXML
+    // private Label typeLabel;
 
     public Card getCard(){
         return model;
@@ -24,9 +24,9 @@ public class CardController extends Controller<Card>{
     @FXML
     public void initialize(){
         if(model != null) {
-            strengthLabel.setText(String.valueOf(model.getStrength()));
-            nameLabel.setText(model.toString());
-            typeLabel.setText("Type: " + model.getType().name());
+            // strengthLabel.setText(String.valueOf(model.getStrength()));
+            // nameLabel.setText(model.toString());
+            // typeLabel.setText("Type: " + model.getType().name());
 
             try{
                 String cardName = model.nameProperty() != null ? model.nameProperty().get() : model.toString();
@@ -36,6 +36,9 @@ public class CardController extends Controller<Card>{
             } catch (Exception e) {
                 System.out.println("Can't find card image! " + e.getMessage());
             }
+            ////////////////
+            /// Potential for a fallback to only show text if there is no image for the card
+            // but for now I am cooked for time
         }
     }
 
