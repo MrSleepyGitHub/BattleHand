@@ -12,7 +12,13 @@
       <Label styleClass="padding-medium" style="-fx-font-weight: bold; -fx-font-size: 18pt">Battle Hand</Label>
       <Separator/>
 
-      <Label text="Total Strength:"/>
+      <HBox alignment="CENTER" spacing="5">
+            <Label text="Total Strength:"/>
+            <Label text="${controller.battleHand.strengthProperty}"/>
+      </HBox>
+
+      <ListView fx:id="cardsList" items="${controller.battleHand.cards}" VBox.vgrow="ALWAYS"/>
+      <!-- ToDo add cool card graphics here -->
 
       <Region VBox.vgrow="ALWAYS"/>
 
