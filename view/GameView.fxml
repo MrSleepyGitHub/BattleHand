@@ -8,7 +8,17 @@
             fx:controller="controller.GameController"
             prefWidth="700.0" stylesheets="@/view/style.css" alignment="CENTER">
 
+        <!-- Header -->
         <Label styleClass="padding-medium" style="-fx-font-weight: bold; -fx-font-size: 18pt">Battle Hand</Label>
         <Separator/>
+
+        <!-- Spacer -->
+        <Region VBox.vgrow="ALWAYS"/>
+        <Separator/>
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER">
+            <Button text="Deal" onAction="#handleDeal" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+        </HBox>
 
 </VBox>
