@@ -16,6 +16,14 @@
         <Region VBox.vgrow="ALWAYS"/>
         <Separator/>
 
+        <!-- Deck buttons -->
+        <HBox alignment="CENTER">
+            <Button text="Main Deck" onAction="#handleMainDeck" style="-fx-background-radius: 0;"/>
+            <Button text="Special Deck" onAction="#handleSpecialDeck" style="-fx-background-radius: 0;"/>
+            <Button text="Discard Pile" onAction="#handleDiscardPile" style="-fx-background-radius: 0;"/>
+        </HBox>
+        <Separator/>
+
         <!-- player buttons -->
         <HBox alignment="CENTER">
             <Button text="Player 1" onAction="#handlePlayer1" style="-fx-background-radius: 0;"/>

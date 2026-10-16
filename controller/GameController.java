@@ -7,6 +7,10 @@ import model.exception.EmptyDeckException;
 
 public class GameController extends Controller<Game> {
 
+    /////////////////////////////////////////////////////
+    // MAIN WINDOW
+    ////
+
     @FXML
     private TextField weakenField;
 
@@ -79,9 +83,9 @@ public class GameController extends Controller<Game> {
         stage.close();
     }
 
-/////////////////////////////////////////////////////
-// PLAYER WINDOWS
-////
+    /////////////////////////////////////////////////////
+    // PLAYER WINDOWS
+    ////
 
     @FXML 
     private void handlePlayer1(){
@@ -102,7 +106,35 @@ public class GameController extends Controller<Game> {
             model.Player player = getGame().getPlayers()[playerIndex];
             au.edu.uts.ap.javafx.ViewLoader.showStage(player, "/view/PlayerView.fxml", title, playerStage);
         } catch(Exception e){
-            System.out.println("Error opening window for: " +title + ": " +e.getMessage());
+            System.out.println("Error opening window for " + title + ": " +e.getMessage());
+        }
+    }
+
+    /////////////////////////////////////////////////////
+    // DECK WINDOW
+    ////
+    
+    @FXML 
+    private void handleMainDeck(){
+        openDeckView(getGame().getMainDeck(), "Main Deck");
+    }
+
+    @FXML 
+    private void handleSpecialDeck(){
+        openDeckView(getGame().getMainDeck(), "Special Deck");
+    }
+
+    @FXML 
+    private void handleDiscardPile(){
+        openDeckView(getGame().getMainDeck(), "Discard Pile");
+    }
+
+    private void  openDeckView(model.Deck deck, String title){
+        try{
+            javafx.stage.Stage deckStage = new javafx.stage.Stage();
+            au.edu.uts.ap.javafx.ViewLoader.showStage(deck, "/view/DeckView.fxml", title, deckStage);
+        } catch(Exception e){
+            System.out.println("Error opening window for " + title + ": " +e.getMessage());
         }
     }
 

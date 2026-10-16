@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      >
+      fx:controller="controller.DeckController"
+      prefWidth="700.0" prefHeight="500.0" stylesheets="@/view/style.css" alignment="CENTER" spacing="15">
+
+      <!-- Header -->
+      <Label styleClass="padding-medium" style="-fx-font-weight: bold; -fx-font-size: 18pt">Deck View</Label>
+      <Separator/>
+
+      <ListView fx:id="cardsList" items="${controller.deck.cards}" VBox.vgrow="ALWAYS"/>
+
+      <!-- Buttons -->
+        <HBox alignment="CENTER">
+            <Button text="Shuffle" onAction="#handleShuffle" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+            <Button text="Close" onAction="#handleClose" HBox.hgrow="ALWAYS" maxWidth="Infinity" style="-fx-background-radius: 0;"/>
+        </HBox>
+
 
 </VBox>
